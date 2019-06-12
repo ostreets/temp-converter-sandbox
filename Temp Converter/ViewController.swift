@@ -10,11 +10,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var convertButton: UIButton!
+    @IBOutlet weak var fahrenheitTextField: UITextField!
+    @IBOutlet weak var celsiusTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    @IBAction func convertTemp(sender: UIButton) {
+        NSLog("Tapped Button")
+        fahrenheitTextField.text = "Temp!"
+        celsiusTextField.text = " Convert!"
+    }
 
 }
 
