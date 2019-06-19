@@ -55,7 +55,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearFields(sender: UIButton) {
-        if fahrenheitTextField.text != "" && celsiusTextField.text == "" || fahrenheitTextField.text == "" && celsiusTextField.text != "" || fahrenheitTextField.text != "" && celsiusTextField.text != "" {
+        if fahrenheitTextField.text != "" && celsiusTextField.text == "" ||
+            fahrenheitTextField.text == "" && celsiusTextField.text != "" ||
+            fahrenheitTextField.text != "" && celsiusTextField.text != "" {
             fahrenheitTextField.text = ""
             celsiusTextField.text = ""
             print("both fahrenheit and celsius cleared")
