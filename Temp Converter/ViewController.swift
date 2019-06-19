@@ -18,10 +18,23 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func convertTemp(sender: UIButton) {
-        NSLog("Tapped Button")
-        fahrenheitTextField.text = "Temp!"
-        celsiusTextField.text = " Convert!"
+        let fahrenheit = fahrenheitTextField.text
+        let celsius = celsiusTextField.text
+    
+        if fahrenheitTextField.text == nil || celsiusTextField.text != "" {
+            convertToFahrenheit(celsius: Int(celsius))
+        }
+        else if celsiusTextField.text == nil || fahrenheitTextField.text != ""{
+            convertToCelcius(fahrenheit: Int(fahrenheit))
+        }
     }
-
+    
+    func convertToCelcius(fahrenheit: Int) -> Int{
+            return Int(5/9 * (Double(fahrenheit) - 32))
+    }
+    
+    func convertToFahrenheit(celsius: Int) -> Int{
+        return Int(5/9 * (Double(celsius)) + 32)
+    }
 }
 
