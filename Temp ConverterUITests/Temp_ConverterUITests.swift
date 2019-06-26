@@ -9,18 +9,11 @@
 import XCTest
 
 class Temp_ConverterUITests: XCTestCase {
-    var app = XCUIApplication()
-    var fahrenheitField: XCUIElement!
-    var celsiusField: XCUIElement!
-    var clearButton: XCUIElement!
-    var convertButton: XCUIElement!
+    var testHelper: TestHelper!
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        fahrenheitField = app.textFields.element(boundBy: 0)
-        celsiusField = app.textFields.element(boundBy: 1)
-        clearButton = app.buttons.element(boundBy: 0)
-        convertButton = app.buttons.element(boundBy: 1)
+        testHelper = TestHelper()
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
 
@@ -35,35 +28,35 @@ class Temp_ConverterUITests: XCTestCase {
     }
 
     func testConvertButton() {
-        convertButton.tap()
-        XCTAssertEqual(celsiusField.value as? String, "0")
-        XCTAssertEqual(fahrenheitField.value as? String, "0")
-        convertButton.tap()
-        XCTAssertEqual(celsiusField.value as? String, "")
-        XCTAssertEqual(fahrenheitField.value as? String, "")
+        testHelper.convertButton.tap()
+        XCTAssertEqual(testHelper.celsiusField.value as? String, "0")
+        XCTAssertEqual(testHelper.fahrenheitField.value as? String, "0")
+        testHelper.convertButton.tap()
+        XCTAssertEqual(testHelper.celsiusField.value as? String, "")
+        XCTAssertEqual(testHelper.fahrenheitField.value as? String, "")
     }
     
     func testFahrenheitToCelsius() {
-        fahrenheitField.tap()
-        fahrenheitField.typeText("32")
-        convertButton.tap()
-        XCTAssertEqual(celsiusField.value as? String, "0.0")
+        testHelper.fahrenheitField.tap()
+        testHelper.fahrenheitField.typeText("32")
+        testHelper.convertButton.tap()
+        XCTAssertEqual(testHelper.celsiusField.value as? String, "0.0")
     }
     
     func testCelsiusToFahrenheit() {
-        celsiusField.tap()
-        celsiusField.typeText("16")
-        convertButton.tap()
-        XCTAssertEqual(fahrenheitField.value as? String, "60.8")
+        testHelper.celsiusField.tap()
+        testHelper.celsiusField.typeText("16")
+        testHelper.convertButton.tap()
+        XCTAssertEqual(testHelper.fahrenheitField.value as? String, "60.8")
     }
     
     func testClearFields() {
-        fahrenheitField.tap()
-        fahrenheitField.typeText("32")
-        convertButton.tap()
-        XCTAssertEqual(celsiusField.value as? String, "0.0")
-        clearButton.tap()
-        XCTAssertEqual(celsiusField.value as? String, "")
-        XCTAssertEqual(fahrenheitField.value as? String, "")
+        testHelper.fahrenheitField.tap()
+        testHelper.fahrenheitField.typeText("32")
+        testHelper.convertButton.tap()
+        XCTAssertEqual(testHelper.celsiusField.value as? String, "0.0")
+        testHelper.clearButton.tap()
+        XCTAssertEqual(testHelper.celsiusField.value as? String, "")
+        XCTAssertEqual(testHelper.fahrenheitField.value as? String, "")
     }
 }

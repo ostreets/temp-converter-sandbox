@@ -13,6 +13,7 @@
 		FB4C2E9A22B16D8C0007C183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4C2E9922B16D8C0007C183 /* Assets.xcassets */; };
 		FB4C2E9D22B16D8C0007C183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4C2E9B22B16D8C0007C183 /* LaunchScreen.storyboard */; };
 		FB53B06B22C3E077001F077F /* Temp_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53B06A22C3E077001F077F /* Temp_ConverterUITests.swift */; };
+		FB53B07422C3E934001F077F /* POM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53B07222C3E876001F077F /* POM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		FB53B06822C3E077001F077F /* Temp ConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Temp ConverterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB53B06A22C3E077001F077F /* Temp_ConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp_ConverterUITests.swift; sourceTree = "<group>"; };
 		FB53B06C22C3E077001F077F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB53B07222C3E876001F077F /* POM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = POM.swift; path = "Temp ConverterUITests/POM.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FB4C2E8622B16D8B0007C183 = {
 			isa = PBXGroup;
 			children = (
+				FB53B07222C3E876001F077F /* POM.swift */,
 				FB4C2EA422B16E360007C183 /* README.md */,
 				FB4C2E9122B16D8B0007C183 /* Temp Converter */,
 				FB53B06922C3E077001F077F /* Temp ConverterUITests */,
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB53B07422C3E934001F077F /* POM.swift in Sources */,
 				FB53B06B22C3E077001F077F /* Temp_ConverterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
