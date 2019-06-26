@@ -12,7 +12,18 @@
 		FB4C2E9822B16D8B0007C183 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4C2E9622B16D8B0007C183 /* Main.storyboard */; };
 		FB4C2E9A22B16D8C0007C183 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB4C2E9922B16D8C0007C183 /* Assets.xcassets */; };
 		FB4C2E9D22B16D8C0007C183 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB4C2E9B22B16D8C0007C183 /* LaunchScreen.storyboard */; };
+		FB53B06B22C3E077001F077F /* Temp_ConverterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB53B06A22C3E077001F077F /* Temp_ConverterUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB53B06D22C3E077001F077F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB4C2E8722B16D8B0007C183 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB4C2E8E22B16D8B0007C183;
+			remoteInfo = "Temp Converter";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		FB4C2E8F22B16D8B0007C183 /* Temp Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Temp Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -23,10 +34,20 @@
 		FB4C2E9C22B16D8C0007C183 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB4C2E9E22B16D8C0007C183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB4C2EA422B16E360007C183 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FB53B06822C3E077001F077F /* Temp ConverterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Temp ConverterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB53B06A22C3E077001F077F /* Temp_ConverterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp_ConverterUITests.swift; sourceTree = "<group>"; };
+		FB53B06C22C3E077001F077F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FB4C2E8C22B16D8B0007C183 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB53B06522C3E076001F077F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +62,7 @@
 			children = (
 				FB4C2EA422B16E360007C183 /* README.md */,
 				FB4C2E9122B16D8B0007C183 /* Temp Converter */,
+				FB53B06922C3E077001F077F /* Temp ConverterUITests */,
 				FB4C2E9022B16D8B0007C183 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				FB4C2E8F22B16D8B0007C183 /* Temp Converter.app */,
+				FB53B06822C3E077001F077F /* Temp ConverterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,6 +87,15 @@
 				FB4C2E9E22B16D8C0007C183 /* Info.plist */,
 			);
 			path = "Temp Converter";
+			sourceTree = "<group>";
+		};
+		FB53B06922C3E077001F077F /* Temp ConverterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB53B06A22C3E077001F077F /* Temp_ConverterUITests.swift */,
+				FB53B06C22C3E077001F077F /* Info.plist */,
+			);
+			path = "Temp ConverterUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +118,24 @@
 			productReference = FB4C2E8F22B16D8B0007C183 /* Temp Converter.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FB53B06722C3E076001F077F /* Temp ConverterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB53B07122C3E077001F077F /* Build configuration list for PBXNativeTarget "Temp ConverterUITests" */;
+			buildPhases = (
+				FB53B06422C3E076001F077F /* Sources */,
+				FB53B06522C3E076001F077F /* Frameworks */,
+				FB53B06622C3E076001F077F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB53B06E22C3E077001F077F /* PBXTargetDependency */,
+			);
+			name = "Temp ConverterUITests";
+			productName = "Temp ConverterUITests";
+			productReference = FB53B06822C3E077001F077F /* Temp ConverterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +148,10 @@
 				TargetAttributes = {
 					FB4C2E8E22B16D8B0007C183 = {
 						CreatedOnToolsVersion = 10.2.1;
+					};
+					FB53B06722C3E076001F077F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FB4C2E8E22B16D8B0007C183;
 					};
 				};
 			};
@@ -115,6 +169,7 @@
 			projectRoot = "";
 			targets = (
 				FB4C2E8E22B16D8B0007C183 /* Temp Converter */,
+				FB53B06722C3E076001F077F /* Temp ConverterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +185,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB53B06622C3E076001F077F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,7 +204,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FB53B06422C3E076001F077F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB53B06B22C3E077001F077F /* Temp_ConverterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB53B06E22C3E077001F077F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB4C2E8E22B16D8B0007C183 /* Temp Converter */;
+			targetProxy = FB53B06D22C3E077001F077F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FB4C2E9622B16D8B0007C183 /* Main.storyboard */ = {
@@ -316,6 +394,44 @@
 			};
 			name = Release;
 		};
+		FB53B06F22C3E077001F077F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VF6FDK62Z;
+				INFOPLIST_FILE = "Temp ConverterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.temp-convert.Temp-ConverterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Temp Converter";
+			};
+			name = Debug;
+		};
+		FB53B07022C3E077001F077F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6VF6FDK62Z;
+				INFOPLIST_FILE = "Temp ConverterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.temp-convert.Temp-ConverterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Temp Converter";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +449,15 @@
 			buildConfigurations = (
 				FB4C2EA222B16D8C0007C183 /* Debug */,
 				FB4C2EA322B16D8C0007C183 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB53B07122C3E077001F077F /* Build configuration list for PBXNativeTarget "Temp ConverterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB53B06F22C3E077001F077F /* Debug */,
+				FB53B07022C3E077001F077F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
