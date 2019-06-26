@@ -10,9 +10,17 @@ import XCTest
 
 class Temp_ConverterUITests: XCTestCase {
     var app = XCUIApplication()
+    var fahrenheitField: XCUIElement!
+    var celsiusField: XCUIElement!
+    var clearButton: XCUIElement!
+    var convertButton: XCUIElement!
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-
+        fahrenheitField = app.textFields.element(boundBy: 0)
+        celsiusField = app.textFields.element(boundBy: 1)
+        clearButton = app.buttons.element(boundBy: 0)
+        convertButton = app.buttons.element(boundBy: 1)
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
 
@@ -27,9 +35,6 @@ class Temp_ConverterUITests: XCTestCase {
     }
 
     func testConvertButton() {
-        let fahrenheitField = app.textFields.element(boundBy: 0)
-        let celsiusField = app.textFields.element(boundBy: 1)
-        let convertButton = app.buttons.element(boundBy: 1)
         convertButton.tap()
         XCTAssertEqual(celsiusField.value as? String, "0")
         XCTAssertEqual(fahrenheitField.value as? String, "0")
@@ -39,9 +44,6 @@ class Temp_ConverterUITests: XCTestCase {
     }
     
     func testFahrenheitToCelsius() {
-        let fahrenheitField = app.textFields.element(boundBy: 0)
-        let celsiusField = app.textFields.element(boundBy: 1)
-        let convertButton = app.buttons.element(boundBy: 1)
         fahrenheitField.tap()
         fahrenheitField.typeText("32")
         convertButton.tap()
@@ -49,9 +51,6 @@ class Temp_ConverterUITests: XCTestCase {
     }
     
     func testCelsiusToFahrenheit() {
-        let fahrenheitField = app.textFields.element(boundBy: 0)
-        let celsiusField = app.textFields.element(boundBy: 1)
-        let convertButton = app.buttons.element(boundBy: 1)
         celsiusField.tap()
         celsiusField.typeText("16")
         convertButton.tap()
@@ -59,10 +58,6 @@ class Temp_ConverterUITests: XCTestCase {
     }
     
     func testClearFields() {
-        let fahrenheitField = app.textFields.element(boundBy: 0)
-        let celsiusField = app.textFields.element(boundBy: 1)
-        let clearButton = app.buttons.element(boundBy: 0)
-        let convertButton = app.buttons.element(boundBy: 1)
         fahrenheitField.tap()
         fahrenheitField.typeText("32")
         convertButton.tap()
